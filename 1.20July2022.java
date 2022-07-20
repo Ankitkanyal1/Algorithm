@@ -15,9 +15,7 @@ class Solution {
                 n=mid-1;
             }
             mid=(first+n)/2;
-           
         }
-        return -1;
-        
+        return -1;   
     }
 }
