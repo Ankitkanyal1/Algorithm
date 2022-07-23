@@ -56,3 +56,28 @@ class Solution {
     }
 }
 
+//Question 3 ==> Reverse String || Time Complexity ==> O(1)
+/*Write a function that reverses a string. The input string is given as an array of characters s.
+You must do this by modifying the input array in-place with O(1) extra memory.
+Example 1:
+Input: s = ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]*/
+
+
+class Solution {
+    public void reverseString(char[] s) {
+        int n=s.length;
+        int left=0;
+        int right=n-1;
+        char tempL;
+        char tempR;
+        while(left<right){
+            tempL=s[left];
+            tempR=s[right];
+            s[left]=tempR;
+            s[right]=tempL;
+            left++;right--;
+        }   
+    }
+}
+
