@@ -63,7 +63,6 @@ Example 1:
 Input: s = ["h","e","l","l","o"]
 Output: ["o","l","l","e","h"]*/
 
-
 class Solution {
     public void reverseString(char[] s) {
         int n=s.length;
@@ -78,6 +77,24 @@ class Solution {
             s[right]=tempL;
             left++;right--;
         }   
+    }
+}
+
+/*Question 4 ==> Given the head of a singly linked list, return the middle node of the linked list.
+If there are two middle nodes, return the second middle node.
+Example :
+Input: head = [1,2,3,4,5]
+Output: [3,4,5]
+Explanation: The middle node of the list is node 3.*/
+
+class Solution {
+    public ListNode middleNode(ListNode head) {
+      ListNode start=head,end=head;
+        while(end!=null&&end.next!=null){
+            start=start.next;
+            end=end.next.next;
+        }
+        return start;
     }
 }
 
